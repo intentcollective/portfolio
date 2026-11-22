@@ -248,75 +248,55 @@
       <div class="checklist__group">
         <h3><a href="#system">1. One identity system</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c1-1"> The same names, titles, dates, and descriptions on your site, resume, PDF, and LinkedIn</label></li>
-          <li><label><input type="checkbox" data-check="c1-2"> One type and color system across all four</label></li>
+          <li><label><input type="checkbox" data-check="c1-1"> Your site, resume, PDF, and LinkedIn match in content, type, and color</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#literacy">2. Tools and design literacy</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c2-1"> Your site is built from your own files and published on GitHub Pages</label></li>
-          <li><label><input type="checkbox" data-check="c2-2"> Your own domain, .com or .design, points to the site</label></li>
+          <li><label><input type="checkbox" data-check="c2-1"> Your site is live on GitHub Pages at your own domain</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#reader">3. Know your audience</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c3-1"> The About page reads as a cover letter</label></li>
-          <li><label><input type="checkbox" data-check="c3-2"> No personal photos on the site</label></li>
-          <li><label><input type="checkbox" data-check="c3-3"> Email, resume, and LinkedIn are one click away on every page</label></li>
+          <li><label><input type="checkbox" data-check="c3-1"> The About page reads as a cover letter, with no personal photos</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#choose">4. Choose the work</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c4-1"> Eight to twelve finished projects</label></li>
-          <li><label><input type="checkbox" data-check="c4-2"> Your two strongest projects come first</label></li>
-          <li><label><input type="checkbox" data-check="c4-3"> The work covers a range of disciplines</label></li>
+          <li><label><input type="checkbox" data-check="c4-1"> Eight to twelve finished projects, strongest first</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#story">5. Tell each story</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c5-1"> Every project opens with one sentence</label></li>
-          <li><label><input type="checkbox" data-check="c5-2"> Every project follows the same order, from the work to the reflection</label></li>
-          <li><label><input type="checkbox" data-check="c5-3"> Discipline, format, tools, and role are listed</label></li>
+          <li><label><input type="checkbox" data-check="c5-1"> Every project opens with one sentence and follows the same order</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#principles">6. The website</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c6-1"> A column grid that holds on a laptop and a phone</label></li>
-          <li><label><input type="checkbox" data-check="c6-2"> Lines of 45 to 75 characters</label></li>
-          <li><label><input type="checkbox" data-check="c6-3"> A small set of type sizes, each with one job</label></li>
-          <li><label><input type="checkbox" data-check="c6-4"> Every image is described and compressed</label></li>
-          <li><label><input type="checkbox" data-check="c6-6"> Every project is photographed well, with good light and setting</label></li>
-          <li><label><input type="checkbox" data-check="c6-5"> Checked on a real phone</label></li>
+          <li><label><input type="checkbox" data-check="c6-1"> Every project photographed well, and the site checked on a real phone</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#resume">7. The resume</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c7-1"> No personal photos, no script type, one accent color at most</label></li>
-          <li><label><input type="checkbox" data-check="c7-2"> Live text, plain section names, and a one column main body</label></li>
-          <li><label><input type="checkbox" data-check="c7-3"> It passes the paste test</label></li>
+          <li><label><input type="checkbox" data-check="c7-1"> It passes the paste test</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#build">8. The PDF portfolio</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c8-1"> A page size chosen with intent</label></li>
-          <li><label><input type="checkbox" data-check="c8-2"> Your name, web address, and a page number on every page</label></li>
-          <li><label><input type="checkbox" data-check="c8-3"> Built with a grid, paragraph styles, and parent pages</label></li>
+          <li><label><input type="checkbox" data-check="c8-1"> Your name, web address, and a page number on every page</label></li>
         </ul>
       </div>
       <div class="checklist__group">
         <h3><a href="#linkedin">9. LinkedIn</a></h3>
         <ul class="checklist__items">
-          <li><label><input type="checkbox" data-check="c9-1"> A professional photo and a background in your system</label></li>
-          <li><label><input type="checkbox" data-check="c9-2"> Content matches your resume word for word</label></li>
-          <li><label><input type="checkbox" data-check="c9-3"> You joined the SCAD Atlanta Graphic Design Alumni Network</label></li>
-          <li><label><input type="checkbox" data-check="c9-4"> 500+ connections</label></li>
+          <li><label><input type="checkbox" data-check="c9-1"> 500+ connections, and you’ve joined the SCAD Atlanta alumni network</label></li>
         </ul>
       </div>
       <p class="checklist__count" aria-live="polite"></p>
@@ -361,7 +341,7 @@
 <script>
 /* The checklist. Each box remembers itself in this browser. */
 (function () {
-  const key = "guide-checklist";
+  const key = "guide-checklist-2";
   let done = {};
   try { done = JSON.parse(localStorage.getItem(key) || "{}"); } catch (e) {}
   const boxes = [...document.querySelectorAll("[data-check]")];
