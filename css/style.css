@@ -969,3 +969,24 @@ figcaption {
 .stella-example { padding: 0; background: none; display: flex; flex-direction: column; gap: var(--s3); }
 .stella-example__state { padding: var(--s5); background: var(--gold); }
 .stella-example__state + .stella-example__state { margin-top: 0; padding-top: var(--s5); border-top: 0; }
+
+/* =========================================================
+   14. guide.html, the checklist and the Stella note
+   ========================================================= */
+/* The checklist uses the site's own colors. Gold stays with the hunt. */
+.checklist__group { margin-top: var(--s6); }
+.checklist__group h3 { margin: 0 0 var(--s3); }
+.checklist__group h3 a { border-bottom: 0; }
+.guide-section .checklist__items { list-style: none; margin: 0; }
+.checklist__items li + li { margin-top: var(--s2); }
+.checklist__items label { display: flex; gap: var(--s3); align-items: baseline; cursor: pointer; }
+.checklist__items input { flex: none; width: 16px; height: 16px; margin: 0; accent-color: var(--fg); transform: translateY(2px); cursor: pointer; }
+.checklist__items label:has(input:checked) { color: var(--muted); }
+.checklist__count { margin-top: var(--s6); padding-top: var(--s3); border-top: 1px solid var(--line); font-size: var(--fs-label); color: var(--muted); }
+
+/* The name of the game, big and clear. */
+.guide-section > h2.stella-name { font-size: var(--fs-headline); font-weight: 700; letter-spacing: -0.03em; color: var(--gold); }
+/* Why the hunt exists, framed by a gold rule. */
+.stella-note { margin-top: var(--s7); padding-left: var(--s4); border-left: 2px solid var(--gold); }
+.stella-note__label { margin-bottom: var(--s2); font-size: var(--fs-label); color: var(--gold); }
+@media print { .checklist__count { display: none; } }

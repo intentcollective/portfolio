@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- Asks search engines not to list this example site. -->
 <meta name="robots" content="noindex">
-<script>try{if(sessionStorage.getItem("unlocked")===null||(performance.getEntriesByType("navigation")[0]||{}).type==="reload")document.documentElement.classList.add("is-locked")}catch(e){}</script>
+<script>try{if(localStorage.getItem("unlocked")===null)document.documentElement.classList.add("is-locked")}catch(e){}</script>
 <title>Making a portfolio site as an emerging graphic designer</title>
 <meta name="description" content="The process and principles behind this example portfolio.">
 <link rel="preload" href="fonts/DMSans-Roman.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,21 +16,38 @@
 
 <main class="page guide wrap">
   <h1 class="page-title page-title--big">Making a portfolio site as an emerging graphic designer</h1>
-  <p class="lead">This site was built as an example for the students of <a class="action" href="https://www.linkedin.com/in/myautumnsky/" target="_blank" rel="noopener">Henry</a>, the designer with Loid Forger’s rizz and Gromit’s quiet genius. Anya would give him eight Stella stars. Gromit Forger is his alter ego from another universe in the Spider-Verse, and entirely fictional.</p>
+  <p class="lead">This site was built as an example for the students of <a class="action" href="https://www.linkedin.com/in/myautumnsky/" target="_blank" rel="noopener">Henry</a>, the designer with Loid Forger’s rizz and Gromit’s quiet genius. Anya would give him eight Stellas. Gromit Forger is his alter ego from another universe in the Spider-Verse, and entirely fictional.</p>
   <p class="guide-note" style="margin-top:var(--s5);max-width:var(--measure-wide)">This site is never meant to be copied, not its code, not its look, and not its words. It is a generic example of the parts every portfolio needs, the site map, the visual structure, and the path a reviewer takes through the work. Study those decisions, then design a site that looks like you.</p>
 
   <nav class="guide-toc" aria-label="Guide contents">
-    <a href="#literacy">1. Tools and design literacy</a>
-    <a href="#reader">2. Know your audience</a>
-    <a href="#choose">3. Choose the work</a>
-    <a href="#story">4. Tell each story</a>
-    <a href="#principles">5. Design principles</a>
-    <a href="#build">6. The PDF portfolio</a>
+    <a href="#system">1. One identity system</a>
+    <a href="#literacy">2. Tools and design literacy</a>
+    <a href="#reader">3. Know your audience</a>
+    <a href="#choose">4. Choose the work</a>
+    <a href="#story">5. Tell each story</a>
+    <a href="#principles">6. The website</a>
+    <a href="#resume">7. The resume</a>
+    <a href="#build">8. The PDF portfolio</a>
+    <a href="#linkedin">9. LinkedIn</a>
+    <a href="#checklist">10. Your checklist</a>
+    <a href="#stella">Where is Stella?</a>
   </nav>
 
   <!-- ===================================================== -->
+  <section class="guide-section" id="system">
+    <h2>1. One identity system</h2>
+    <div>
+      <p>Your website, resume, PDF portfolio, and LinkedIn are <strong>one identity system</strong>. This is a <strong>brand experience</strong> project, not an exercise in self-expression. Every touch point should feel like the same designer, visually, experientially, and conceptually.</p>
+      <p>Your materials are <strong>communication</strong> first. They exist to deliver <strong>information</strong> clearly, and the way you handle that information is the proof of your skill. <strong>Restraint</strong> is not the absence of personality. Your <strong>personality lives in the system</strong>, in the grid, the type, and the consistency across everything you make.</p>
+
+      <h3>One source of truth</h3>
+      <p>Project names, job titles, dates, descriptions, and your voice stay identical everywhere. Only the format changes. Reviewers cross-check, and a date that differs between your resume and your LinkedIn reads as careless.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
   <section class="guide-section" id="literacy">
-    <h2>1. Tools and design literacy</h2>
+    <h2>2. Tools and design literacy</h2>
     <div>
       <p>Knowing how a website is built, the proper, traditional way, is part of your design literacy. HTML, CSS, JavaScript, wireframes, and Figma all matter. Use this project to raise your web design skills as far as you can.</p>
       <p>Your portfolio website and your PDF are not just containers for your work. They are pieces of your portfolio in their own right, and they show your web design and page layout literacy as clearly as any project in them.</p>
@@ -56,7 +73,7 @@
 
   <!-- ===================================================== -->
   <section class="guide-section" id="reader">
-    <h2>2. Know your audience</h2>
+    <h2>3. Know your audience</h2>
     <div>
       <h3>You are an applicant</h3>
       <p>A portfolio site for an emerging designer is not a showcase of your personality. It is evidence of your capability and experience, made for people deciding whether to hire you for an entry-level role on their design team.</p>
@@ -77,7 +94,7 @@
 
   <!-- ===================================================== -->
   <section class="guide-section" id="choose">
-    <h2>3. Choose the work</h2>
+    <h2>4. Choose the work</h2>
     <div>
       <ul class="dots">
         <li><strong>Eight to twelve projects.</strong> Reviewers won’t look at all of them, but the number still matters. It shows how much you can do. Every one has to be finished and strong.</li>
@@ -91,7 +108,7 @@
 
   <!-- ===================================================== -->
   <section class="guide-section" id="story">
-    <h2>4. Tell each story</h2>
+    <h2>5. Tell each story</h2>
     <div>
       <h3>Prove it’s yours</h3>
       <p>In the age of AI, anyone can produce a polished image in seconds. That makes it harder, and more important, to prove your design literacy. Show what only a designer can show. Your strategy, your intent, how you write a brief, and a process you can repeat as a method.</p>
@@ -118,9 +135,15 @@
 
   <!-- ===================================================== -->
   <section class="guide-section" id="principles">
-    <h2>5. Design principles</h2>
+    <h2>6. The website</h2>
     <div>
       <p>Your portfolio is a design project. It should show the same care as your work, then get out of its way.</p>
+      <ul class="dots">
+        <li><strong>The work is the hero.</strong> The interface stays quiet so your projects can speak.</li>
+        <li><strong>One system, everywhere.</strong> The same type, grid, and rhythm on every page.</li>
+        <li><strong>Expressive in the work, restrained in the frame.</strong> Your voice comes through your projects, your writing, and thoughtful interaction, not through decoration.</li>
+        <li><strong>Easy to navigate.</strong> No one should have to figure out your site before seeing your work.</li>
+      </ul>
       <p>These are principles, not a style. Every one of them can be met with a look completely different from this example, and yours should be.</p>
 
       <h3>Grid</h3>
@@ -152,10 +175,35 @@
   </section>
 
   <!-- ===================================================== -->
-  <section class="guide-section" id="build">
-    <h2>6. The PDF portfolio</h2>
+  <section class="guide-section" id="resume">
+    <h2>7. The resume</h2>
     <div>
-      <p>Many companies still ask for a PDF portfolio and a PDF resume. Make them from the same content as your site, so the three never disagree.</p>
+      <p>The resume used to be the piece where a graphic designer proved their layout and typography, along with the business card. The business card is gone, and the portfolio you carried to interviews became a website. The resume stayed. Almost every application still asks for a PDF.</p>
+
+      <h3>It’s information design</h3>
+      <p>A resume is communication, not a place to show off your personality. Hierarchy, spacing, and type do the work. No photos, no script or playful type, and no extra colors. A quiet, well set resume proves more skill than a loud one.</p>
+      <ul class="dots">
+        <li><strong>One typeface family.</strong> The same one as your site.</li>
+        <li><strong>One accent color at most.</strong> Also the same one as your site.</li>
+        <li><strong>Plain section names.</strong> Experience, Education, and Skills. Let the typography carry the design.</li>
+      </ul>
+
+      <h3>Built for people and machines</h3>
+      <p>Many companies run applications through an applicant tracking system, or ATS, that pulls the text out of your PDF before a person ever sees it. A designed layout is fine. Hidden structure is what breaks it.</p>
+      <ul class="dots">
+        <li><strong>Live text only.</strong> No outlined type, and nothing important inside an image.</li>
+        <li><strong>Reading order beats column count.</strong> A narrow sidebar is fine, and the main body stays one column. Thread your text frames in the order they should be read.</li>
+        <li><strong>Nothing important in headers or footers.</strong> Some systems skip them.</li>
+      </ul>
+      <p class="guide-note">The paste test. Select all the text in your PDF and paste it into a plain text file. If it reads top to bottom like a sensible document, a machine can read it too.</p>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <section class="guide-section" id="build">
+    <h2>8. The PDF portfolio</h2>
+    <div>
+      <p>Many companies still ask for a PDF portfolio and a PDF resume. Make them from the same content as your site, so the three never disagree. The PDF is the same identity system in another format, with the same type, grid, and project names.</p>
       <p>Choose the page size with intent. Most reviewers read a PDF on a screen and some will print it, so the shape has to work in both places. A good starting point is 11 × 6.25 in.</p>
       <p class="guide-note">Why these numbers. Almost every laptop and monitor is 16:9, so a 16:9 page fills the screen with no empty bands. The width of 11 in is the long side of a US letter sheet, so the page prints at full size in landscape on any office printer, with a little paper to spare above and below. Exact 16:9 at that width would be 6.1875 in, a number no one can measure, so the height rounds to 6.25 in, less than one percent off. In metric, 272 × 153 mm is exactly 16:9 in whole millimeters and fits on both letter and A4.</p>
       <p>A PDF is read one page at a time. Give each project its own space, and make it obvious where one ends and the next begins. Number the pages. Put your name and web address on every page, because a PDF travels without the email it came in.</p>
@@ -164,11 +212,111 @@
     </div>
   </section>
 
+  <!-- ===================================================== -->
+  <section class="guide-section" id="linkedin">
+    <h2>9. LinkedIn</h2>
+    <div>
+      <p>LinkedIn is your public resume and the place where your professional network lives. If you don’t have an account, make one now.</p>
+      <ul class="dots">
+        <li><strong>Same content, different platform.</strong> Titles, dates, and descriptions match your resume word for word.</li>
+        <li><strong>A photo and a background.</strong> Unlike your site, LinkedIn is about people meeting people, so a clean, professional photo belongs here. Make the background part of your identity system.</li>
+        <li><strong>500 connections by the end of the quarter.</strong> A low number reads as new to the field, or not serious about a career. Past 500, LinkedIn only shows “500+,” so that is the goal. Connect with designers, classmates, alumni, and people at companies you admire.</li>
+        <li><strong>Join the SCAD Atlanta Graphic Design Alumni Network.</strong> Do it the day you open your account. Alumni are your strongest network. Ask them for feedback, and for an introduction when a company or a role interests you.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =====================================================
+       The checklist. Checks are saved in the visitor's own
+       browser (localStorage), like the Stella collection.
+       To add an item, copy a line and give it a new data-check.
+       ===================================================== -->
+  <section class="guide-section" id="checklist">
+    <h2>10. Your checklist</h2>
+    <div class="checklist">
+      <p>Check things off as you go. Your progress is saved in this browser.</p>
+      <div class="checklist__group">
+        <h3><a href="#system">1. One identity system</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c1-1"> The same names, titles, dates, and descriptions on your site, resume, PDF, and LinkedIn</label></li>
+          <li><label><input type="checkbox" data-check="c1-2"> One type and color system across all four</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#literacy">2. Tools and design literacy</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c2-1"> Your site is built from your own files and published on GitHub Pages</label></li>
+          <li><label><input type="checkbox" data-check="c2-2"> Your own domain, .com or .design, points to the site</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#reader">3. Know your audience</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c3-1"> The About page reads as a cover letter</label></li>
+          <li><label><input type="checkbox" data-check="c3-2"> No photo of you on the site</label></li>
+          <li><label><input type="checkbox" data-check="c3-3"> Email, resume, and LinkedIn are one click away on every page</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#choose">4. Choose the work</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c4-1"> Eight to twelve finished projects</label></li>
+          <li><label><input type="checkbox" data-check="c4-2"> Your two strongest projects come first</label></li>
+          <li><label><input type="checkbox" data-check="c4-3"> The work covers a range of disciplines</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#story">5. Tell each story</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c5-1"> Every project opens with one sentence</label></li>
+          <li><label><input type="checkbox" data-check="c5-2"> Every project follows the same order, from the work to the reflection</label></li>
+          <li><label><input type="checkbox" data-check="c5-3"> Discipline, format, tools, and role are listed</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#principles">6. The website</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c6-1"> A column grid that holds on a laptop and a phone</label></li>
+          <li><label><input type="checkbox" data-check="c6-2"> Lines of 45 to 75 characters</label></li>
+          <li><label><input type="checkbox" data-check="c6-3"> A small set of type sizes, each with one job</label></li>
+          <li><label><input type="checkbox" data-check="c6-4"> Every image is described and compressed</label></li>
+          <li><label><input type="checkbox" data-check="c6-5"> Checked on a real phone</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#resume">7. The resume</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c7-1"> No photos, no script type, one accent color at most</label></li>
+          <li><label><input type="checkbox" data-check="c7-2"> Live text, plain section names, and a one column main body</label></li>
+          <li><label><input type="checkbox" data-check="c7-3"> It passes the paste test</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#build">8. The PDF portfolio</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c8-1"> A page size chosen with intent</label></li>
+          <li><label><input type="checkbox" data-check="c8-2"> Your name, web address, and a page number on every page</label></li>
+          <li><label><input type="checkbox" data-check="c8-3"> Built with a grid, paragraph styles, and parent pages</label></li>
+        </ul>
+      </div>
+      <div class="checklist__group">
+        <h3><a href="#linkedin">9. LinkedIn</a></h3>
+        <ul class="checklist__items">
+          <li><label><input type="checkbox" data-check="c9-1"> A professional photo and a background in your system</label></li>
+          <li><label><input type="checkbox" data-check="c9-2"> Content matches your resume word for word</label></li>
+          <li><label><input type="checkbox" data-check="c9-3"> You joined the SCAD Atlanta Graphic Design Alumni Network</label></li>
+          <li><label><input type="checkbox" data-check="c9-4"> 500+ connections</label></li>
+        </ul>
+      </div>
+      <p class="checklist__count" aria-live="polite"></p>
+    </div>
+  </section>
+
   <!-- =====================================================
        An extra. The hunt itself is in js/stars.js.
        ===================================================== -->
   <section class="guide-section guide-section--stella" id="stella">
-    <h2>Extra. <span class="stella-title">Where is Stella?</span></h2>
+    <h2 class="stella-name">Where is Stella?</h2>
     <div>
       <p>Psst. Somewhere on Gromit Forger’s site, eight Stellas are hiding. Anya needs eight to become an <span class="stella-title">Imperial Scholar</span>. So do you.</p>
       <p>The Stellas are numbered by how hard they are to find, from 1, the easiest, to 8, the hardest. Find them in any order. Click or tap a Stella to claim it. Some ask a question first.</p>
@@ -185,6 +333,12 @@
       </div>
       <p>The collection is saved in your own browser. Hunt on one device, and don’t use a private window, or your Stellas won’t be there when you come back. Take a screenshot of each Stella you find, just in case.</p>
       <p class="stella-title">Playtime is ten weeks, the whole quarter. Find all eight before the last class and show your collection to Henry. Not Henderson. Kim. Elegantly.</p>
+
+      <aside class="stella-note">
+        <p class="stella-note__label">Why I built it</p>
+        <p>Where is Stella? is not a game for the sake of a game. This website is the course, and I want you to explore every part of it. Finding the Stellas means moving through the content and structure the way I designed them. The fun and the learning follow the same path, so the navigation, the experience, and the outcome all match the goals of the course.</p>
+        <p>It also never interrupts. There’s no pop up and no video demanding attention, and it never breaks the visual system. That is how I approach any problem, adding something new without disturbing the whole, aesthetically, conceptually, and experientially.</p>
+      </aside>
     </div>
   </section>
 
@@ -193,5 +347,25 @@
 <script src="js/site.js"></script>
 <script src="js/pages.js"></script>
 <script src="js/stars.js"></script>
+<script>
+/* The checklist. Each box remembers itself in this browser. */
+(function () {
+  const key = "guide-checklist";
+  let done = {};
+  try { done = JSON.parse(localStorage.getItem(key) || "{}"); } catch (e) {}
+  const boxes = [...document.querySelectorAll("[data-check]")];
+  const count = document.querySelector(".checklist__count");
+  const update = () => { count.textContent = boxes.filter(b => b.checked).length + " of " + boxes.length + " done"; };
+  boxes.forEach(box => {
+    box.checked = !!done[box.dataset.check];
+    box.addEventListener("change", () => {
+      done[box.dataset.check] = box.checked;
+      try { localStorage.setItem(key, JSON.stringify(done)); } catch (e) {}
+      update();
+    });
+  });
+  update();
+})();
+</script>
 </body>
 </html>

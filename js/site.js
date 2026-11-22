@@ -68,14 +68,10 @@ const Site = {
   async gate() {
     const hash = this.settings.passwordHash;
     if (!hash) return document.documentElement.classList.remove("is-locked");
-    // Unlocking lasts for one visit (one browser tab). A new visit,
-    // or a refresh of the page, asks again.
+    // Unlocking is remembered in this browser, so the password is
+    // asked once. Changing the password (a new hash) asks again.
     let open = false;
-    try {
-      const reload = (performance.getEntriesByType("navigation")[0] || {}).type === "reload";
-      if (reload) sessionStorage.removeItem("unlocked");
-      open = sessionStorage.getItem("unlocked") === hash;
-    } catch (e) {}
+    try { open = localStorage.getItem("unlocked") === hash; } catch (e) {}
     if (open) return document.documentElement.classList.remove("is-locked");
 
     document.documentElement.classList.add("is-locked");
@@ -97,7 +93,7 @@ const Site = {
         event.preventDefault();
         const input = gate.querySelector("input");
         if (await sha(input.value.trim().toLowerCase()) === hash) {
-          try { sessionStorage.setItem("unlocked", hash); } catch (e) {}
+          try { localStorage.setItem("unlocked", hash); } catch (e) {}
           gate.remove();
           document.documentElement.classList.remove("is-locked");
           resolve();

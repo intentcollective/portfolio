@@ -17,7 +17,7 @@ Plain HTML, CSS and JavaScript. No framework and no build step.
 
 ## Password screen
 
-`passwordHash` in `content/settings.json` turns on a simple password screen. It holds the SHA-256 hash of the password, not the password itself. To change the password, replace it with the hash of the new one (for example, `echo -n newpassword | shasum -a 256`). Remove the line to turn the screen off.
+`passwordHash` in `content/settings.json` turns on a simple password screen. It holds the SHA-256 hash of the password, not the password itself. To change the password, replace it with the hash of the new one (for example, `echo -n newpassword | shasum -a 256`). Remove the line to turn the screen off. Each browser asks once and then remembers. Changing the password asks everyone again, so change it every quarter.
 
 This only keeps casual visitors and search engines out. Every file in the site and the repository is still public, so never rely on it to protect anything private.
 
