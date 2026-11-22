@@ -990,3 +990,7 @@ figcaption {
 .stella-note { margin-top: var(--s7); padding-left: var(--s4); border-left: 2px solid var(--gold); }
 .stella-note__label { margin-bottom: var(--s2); font-size: var(--fs-label); color: var(--gold); }
 @media print { .checklist__count { display: none; } }
+/* A thin gold frame sets the game apart from the guide. */
+.stella-frame { padding: var(--s6); border: 1px solid var(--gold); }
+.stella-frame > div { max-width: var(--measure); }
+@media screen and (max-width: 640px) { .stella-frame { padding: var(--s5) var(--s4); } }
