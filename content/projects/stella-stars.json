@@ -3,16 +3,11 @@
   "discipline": "Information & Data Design",
   "format": "Poster, 24 × 36 in, digital print",
   "color": "#9a8648",
-  "summary": "A poster, drawn as a night sky, that shows how one elite school rewards and punishes its students.",
+  "summary": "A real system of rules, made understandable at a glance. A poster, drawn as a night sky, that shows how one elite school rewards and punishes its students.",
   "tools": "Illustrator, Figma, Claude AI",
   "cover": "",
   "coverAlt": "Poster of a night sky where every star and bolt marks one award",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Collect a real system of rules and make it understandable at a glance."
-    },
     {
       "type": "text",
       "heading": "The idea",

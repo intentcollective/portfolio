@@ -3,16 +3,11 @@
   "discipline": "Editorial & Publication Design",
   "format": "Magazine, 8.5 × 11 in, 32 pages",
   "color": "#4e5a7d",
-  "summary": "A children’s magazine for fans of a cartoon spy, designed so a six-year-old can find every puzzle without help.",
+  "summary": "One issue of a magazine for readers who can’t read well yet. Made for fans of a cartoon spy, so a six-year-old can find every puzzle without help.",
   "tools": "InDesign, Illustrator, Photoshop",
   "cover": "",
   "coverAlt": "Magazine cover with a cartoon spy and bold, easy navigation",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Design one issue of a magazine for readers who can’t read well yet."
-    },
     {
       "type": "text",
       "heading": "The idea",

@@ -3,7 +3,7 @@
   "discipline": "Motion & Time-Based Media",
   "format": "Title sequence, 50 seconds, 1920 × 1080",
   "color": "#6e7773",
-  "summary": "A title sequence for a chase on a model railway, where the type lays its own track one frame ahead of the train.",
+  "summary": "A title sequence under sixty seconds, made in a team. Credits for a chase on a model railway, where the type lays its own track one frame ahead of the train.",
   "tools": "After Effects, Blender, Illustrator",
   "role": "Direction and editing, in a team of three",
   "cover": "",
@@ -13,11 +13,6 @@
       "type": "video",
       "url": "",
       "caption": "Final title sequence."
-    },
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "In a team, design a title sequence under sixty seconds for a film of your choice."
     },
     {
       "type": "text",

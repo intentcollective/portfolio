@@ -3,16 +3,11 @@
   "discipline": "Visual Communication & Poster Design",
   "format": "Poster, 18 × 24 in, digital print",
   "color": "#a39a76",
-  "summary": "A design manifesto that argues ideas get better with age, written as a guide to ripening cheese.",
+  "summary": "A personal design manifesto told through one metaphor from outside design. It argues that ideas get better with age, written as a guide to ripening cheese.",
   "tools": "Photoshop, InDesign",
   "cover": "",
   "coverAlt": "Poster of a wheel of cheese with the manifesto set around its rind",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Write a personal design manifesto and express it through one metaphor from outside design."
-    },
     {
       "type": "text",
       "heading": "The idea",

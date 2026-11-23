@@ -3,16 +3,11 @@
   "discipline": "Experimental & Interdisciplinary Practice",
   "format": "Pop-up exhibition, 26 laser-cut letters, up to 6 ft tall",
   "color": "#7d5262",
-  "summary": "A one-night pop-up exhibition of tall letters that look elegant from across the room and turn sharp as you walk closer.",
+  "summary": "A one-night pop-up exhibition that changes as visitors move through it. Tall letters that look elegant from across the room and turn sharp as you walk closer.",
   "tools": "Illustrator, Blender",
   "cover": "",
   "coverAlt": "Tall cut letters in a City Hall lobby, with small thorns where the serifs would be",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Design a one-night pop-up exhibition that changes as visitors move through it."
-    },
     {
       "type": "text",
       "heading": "The idea",

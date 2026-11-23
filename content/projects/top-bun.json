@@ -3,16 +3,11 @@
   "discipline": "Brand Identity & Experience Systems",
   "format": "Logo, paper bags, labels, shop sign, and van livery",
   "color": "#9a7a55",
-  "summary": "An identity for a family bakery in Wigan that has to work at four in the morning, on a paper bag, in floury hands.",
+  "summary": "An identity a small bakery can afford to use every day. Made for a family bakery in Wigan, it works at four in the morning, on a paper bag, in floury hands.",
   "tools": "Illustrator, InDesign, Photoshop",
   "cover": "",
   "coverAlt": "Bread bags, a shop sign, and a delivery van in the Top Bun identity",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Give a small bakery an identity it can afford to use every day, on bags, labels, a shop sign, and one delivery van."
-    },
     {
       "type": "text",
       "heading": "The idea",

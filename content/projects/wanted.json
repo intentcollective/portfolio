@@ -4,15 +4,10 @@
   "format": "Mobile app and responsive website, 32 screens",
   "tools": "Figma, Illustrator, Claude AI",
   "color": "#8a4a40",
-  "summary": "An app and a website that help a village report sightings of an escaped penguin, so anyone can file a report in under thirty seconds.",
+  "summary": "A digital service that solves a real problem in a small community. An app and a website that let anyone in the village report an escaped penguin in under thirty seconds.",
   "cover": "",
   "coverAlt": "App screens with a map of penguin sightings and one large report button",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Design a digital service that solves a real problem in a small community, on the phone and on the web."
-    },
     {
       "type": "text",
       "heading": "The idea",

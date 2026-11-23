@@ -3,16 +3,11 @@
   "discipline": "Editorial & Publication Design",
   "format": "Book, 6 × 9 in, 96 pages, two-color Risograph",
   "color": "#4d6658",
-  "summary": "A field manual for a spy who has to pass as an ordinary father, designed so the secrets hide in plain sight.",
+  "summary": "A book whose form changes how it is read and by whom. A field manual for a spy who has to pass as an ordinary father, with the secrets hidden in plain sight.",
   "tools": "InDesign, Photoshop",
   "cover": "",
   "coverAlt": "An ordinary parenting handbook with a hidden second text in its margins",
   "blocks": [
-    {
-      "type": "text",
-      "heading": "The brief",
-      "body": "Design a book whose form changes how it is read and by whom."
-    },
     {
       "type": "text",
       "heading": "The idea",
