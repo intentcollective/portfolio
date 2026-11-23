@@ -473,8 +473,21 @@ figcaption {
 .b-gallery__grid { row-gap: var(--gutter); }
 .b-gallery__grid > * { grid-column: span var(--span, 6); }
 .b-gallery__grid img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: var(--ratio, auto); }
-@media screen and (max-width: 1023px) { .b-gallery__grid > * { grid-column: span 3; } }
-@media screen and (max-width: 640px)  { .b-gallery__grid > * { grid-column: span 2; } }
+/* Smaller screens never leave a hole in a gallery.
+   Tablet, 6 columns. Two to a row. Three images stay three across.
+   Phone, 4 columns. Two to a row. With an odd count, the first image
+   leads at full width and the rest pair up beneath it. */
+@media screen and (max-width: 1023px) {
+  .b-gallery__grid > * { grid-column: span 3; }
+  .b-gallery__grid > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+  .b-gallery__grid > :first-child:nth-last-child(3),
+  .b-gallery__grid > :first-child:nth-last-child(3) ~ * { grid-column: span 2; }
+}
+@media screen and (max-width: 640px) {
+  .b-gallery__grid > *,
+  .b-gallery__grid > :first-child:nth-last-child(3) ~ * { grid-column: span 2; }
+  .b-gallery__grid > :first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+}
 
 .b-video__frame { position: relative; aspect-ratio: var(--ratio, 16 / 9); background: var(--line); }
 .b-video__frame iframe, .b-video__frame video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
