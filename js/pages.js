@@ -287,6 +287,7 @@ addEventListener("hashchange", () => { if (document.body.dataset.page === "proje
     if (Site.settings) Site.showError(err);
     console.error(err);
   }
+  Site.typeset();
   document.body.classList.add("is-ready");
   // Tell other scripts (like stars.js) that the page is built.
   document.dispatchEvent(new Event("site:ready"));

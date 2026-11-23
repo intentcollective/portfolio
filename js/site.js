@@ -170,6 +170,77 @@ const Site = {
     (document.querySelector("main") || document.body).prepend(box);
   },
 
+  /* Typesetting, the way it is done by hand.
+       1. Names never break or hyphenate.
+       2. “a,” “an,” and “I” stay with the next word.
+       3. A number stays with what it counts (24 × 36 in, 8 projects).
+       4. The last two words of a paragraph stay together. From
+          480px up, the last three (see .tie3 in style.css).
+     Add a name to the list below and it is protected everywhere. */
+  names: ["Gromit Forger", "Loid Forger", "Henry Hongmin Kim", "alter ego",
+          "Imperial Scholar", "Where is Stella?", "Thorn Princess", "Top Bun",
+          "Operation Strix", "The Wrong Trousers", "Stella Stars",
+          "Cracking Cheese", "Anti-Pesto", "Feathers McGraw", "Eden Academy"],
+
+  typeset(root = document.querySelector("main")) {
+    if (!root) return;
+    const NB = "\u00a0";
+    const nameRe = new RegExp("(" + this.names
+      .map(n => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/ /g, "\\s+")).join("|") + ")", "g");
+    const blocks = root.querySelectorAll("p, li, blockquote, figcaption, dd");
+
+    const walk = el => {
+      const out = [];
+      const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+        acceptNode: n => n.parentElement.closest("code, pre, script, style, button, input, textarea, svg")
+          ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      });
+      while (w.nextNode()) out.push(w.currentNode);
+      return out;
+    };
+
+    blocks.forEach(el => {
+      if (el.dataset.typeset) return;
+      el.dataset.typeset = "1";
+      const nodes = walk(el);
+
+      // Rules 1 to 3, on every piece of text.
+      nodes.forEach(node => {
+        let t = node.nodeValue;
+        t = t.replace(/(^|[\s(“"])(a|an|A|An|I)\s+/g, "$1$2" + NB)
+             .replace(/(\d)\s+×\s+(\d)/g, "$1" + NB + "×" + NB + "$2")
+             .replace(/(\d)\s+(?=[\p{L}×])/gu, "$1" + NB);
+        if (!nameRe.test(t)) { node.nodeValue = t; return; }
+        nameRe.lastIndex = 0;
+        const frag = document.createDocumentFragment();
+        let last = 0;
+        t.replace(nameRe, (m, _n, i) => {
+          frag.append(t.slice(last, i));
+          const span = document.createElement("span");
+          span.className = "nohy";
+          span.textContent = m.replace(/\s+/g, NB);
+          frag.append(span);
+          last = i + m.length;
+        });
+        frag.append(t.slice(last));
+        node.replaceWith(frag);
+      });
+
+      // Rule 4, on the last words.
+      const tail = walk(el).filter(n => n.nodeValue.trim()).pop();
+      if (!tail) return;
+      const m = tail.nodeValue.match(/^([\s\S]*?)(\S+)( +)(\S+)( +)(\S+)(\s*)$/);
+      if (m) {
+        const span = document.createElement("span");
+        span.className = "tie3";
+        span.textContent = m[2] + " " + m[4] + NB + m[6];
+        tail.replaceWith(m[1], span, m[7]);
+      } else {
+        tail.nodeValue = tail.nodeValue.replace(/ +(\S+\s*)$/, NB + "$1");
+      }
+    });
+  },
+
   /* Fade elements in as they scroll into view. */
   reveal(root = document) {
     const items = root.querySelectorAll(".reveal");
@@ -200,7 +271,7 @@ function esc(value = "") {
    with a non-breaking space, so a line never ends on one. An old
    typesetting rule. */
 function tie(value = "") {
-  return String(value).replace(/(^|[\s(“"])([aAI])\s+/g, "$1$2\u00a0");
+  return String(value).replace(/(^|[\s(“"])(a|an|A|An|I)\s+/g, "$1$2\u00a0");
 }
 
 /* A tiny bit of formatting for text blocks:
