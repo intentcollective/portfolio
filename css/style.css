@@ -377,7 +377,7 @@ p, li { hyphens: auto; -webkit-hyphens: auto; hyphenate-limit-chars: 6 3 3; }
 /* Stella 1 stands in for the last period of the intro. Cap height,
    sitting on the baseline like punctuation. */
 .hero__intro .star-btn { vertical-align: baseline; margin-left: 0.04em; }
-.hero__intro .star-btn .star { width: 0.75em; height: 0.75em; vertical-align: baseline; }
+.hero__intro .star-btn .star { width: 0.86em; height: 0.86em; vertical-align: -0.117em; }
 
 /* On a phone, tighten the opening so the top of the first
    card peeks above the fold, a hint that there is more below. */
