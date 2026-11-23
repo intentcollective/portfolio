@@ -240,10 +240,21 @@ const Stars = {
     const page = document.body.dataset.page;
     const slug = new URLSearchParams(location.search).get("p") || location.hash.slice(1);
 
-    // 1. Works page, beside “Selected work, 9 projects”
+    // 1. Works page, in place of the last period of the intro.
+    // The last word and the Stella are held together so it never
+    // wraps alone onto a new line.
     if (page === "works") {
-      const label = document.querySelector(".works__bar .label");
-      if (label) label.insertAdjacentHTML("beforeend", ` ${this.button(1, 18)}`);
+      const intro = document.querySelector(".hero__intro");
+      const w = intro && document.createTreeWalker(intro, NodeFilter.SHOW_TEXT);
+      let last = null;
+      while (w && w.nextNode()) if (w.currentNode.nodeValue.trim()) last = w.currentNode;
+      const m = last && last.nodeValue.match(/^([\s\S]*?)(\S+?)\.?(\s*)$/);
+      if (m) {
+        const hold = document.createElement("span");
+        hold.style.whiteSpace = "nowrap";
+        hold.innerHTML = esc(m[2]) + this.button(1, 18);
+        last.replaceWith(m[1], hold, m[3]);
+      }
     }
 
     if (page === "project") {

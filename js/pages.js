@@ -34,7 +34,6 @@ const Pages = {
       </section>
       <section class="works wrap" id="works">
         <div class="works__bar cols">
-          <span class="label">Selected work, ${(s.works || []).length} projects</span>
           ${s.portfolioPdf ? `<a class="action" href="${esc(s.portfolioPdf)}" target="_blank" rel="noopener">Download PDF portfolio</a>` : ""}
         </div>
         <div class="works__grid cols" id="grid"></div>
