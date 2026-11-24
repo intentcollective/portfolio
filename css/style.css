@@ -1007,6 +1007,8 @@ figcaption {
 .guide-section .checklist__items { list-style: none; margin: 0; }
 .checklist__items li + li { margin-top: var(--s2); }
 .checklist__items label { display: flex; gap: var(--s3); align-items: baseline; cursor: pointer; }
+/* Short lines. A hyphen looks worse here than a ragged edge. */
+.checklist__items li { hyphens: manual; -webkit-hyphens: manual; }
 .checklist__items input { flex: none; width: 16px; height: 16px; margin: 0; accent-color: var(--fg); transform: translateY(2px); cursor: pointer; }
 .checklist__items label:has(input:checked) { color: var(--muted); }
 .checklist__count { margin-top: var(--s6); padding-top: var(--s3); border-top: 1px solid var(--line); font-size: var(--fs-label); color: var(--muted); }
