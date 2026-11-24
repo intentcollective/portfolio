@@ -205,7 +205,7 @@ const Pages = {
   },
 
   /* ---------- PDF portfolio (print.html) ----------
-     An 11 by 6.25 in landscape deck. A cover, then one page for every
+     A 17 by 11 in landscape deck. A cover, then one page for every
      project, numbered, with its title, tools, a short
      description and four images. In Chrome choose File,
      Print, Save as PDF, and turn on background graphics. The
