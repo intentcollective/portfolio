@@ -199,9 +199,35 @@ const Site = {
       return out;
     };
 
+    // Guard. In a flex or grid row, every loose piece of text becomes
+    // its own column. Gather the text of such a row into one span
+    // first, so the ties below can never split it apart.
+    const holdRuns = el => {
+      [el, ...el.querySelectorAll("*")].forEach(box => {
+        if (!/flex|grid/.test(getComputedStyle(box).display)) return;
+        let run = [];
+        const flush = () => {
+          if (run.some(n => n.nodeType !== 3 || n.nodeValue.trim())) {
+            const span = document.createElement("span");
+            run[0].before(span);
+            run.forEach(n => span.append(n));
+          }
+          run = [];
+        };
+        [...box.childNodes].forEach(n => {
+          const inline = n.nodeType === 3 || (n.nodeType === 1
+            && getComputedStyle(n).display.startsWith("inline")
+            && !n.matches("input, button, select, textarea, svg, img"));
+          if (inline) run.push(n); else flush();
+        });
+        flush();
+      });
+    };
+
     blocks.forEach(el => {
       if (el.dataset.typeset) return;
       el.dataset.typeset = "1";
+      holdRuns(el);
       const nodes = walk(el);
 
       // Rules 1 to 3, on every piece of text.
