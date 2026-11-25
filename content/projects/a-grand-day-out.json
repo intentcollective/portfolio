@@ -1,0 +1,65 @@
+{
+  "title": "A Grand Day Out",
+  "discipline": "Advertising & Campaign Design",
+  "format": "Six posters, a social series, and a 15-second spot",
+  "color": "#7a6a8f",
+  "summary": "A campaign that makes people want to go somewhere. Posters, social posts, and a short spot that sell a day trip to the moon like an old seaside holiday.",
+  "tools": "Illustrator, Photoshop, After Effects",
+  "cover": "",
+  "coverAlt": "Vintage-style travel poster of a picnic on the grey sand of the moon",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "The idea",
+      "body": "Old railway posters sold the seaside with one picture and one line. The moon gets the same treatment. Sun, sand, and a picnic, except the sand is grey and the picnic is cheese."
+    },
+    {
+      "type": "placeholder",
+      "label": "Research. Railway and seaside posters from the 1920s to the 1950s, sorted by how few words they used.",
+      "ratio": "16/9"
+    },
+    {
+      "type": "text",
+      "heading": "Process",
+      "body": "I wrote the lines before drawing anything, and kept only those that worked without a picture. Each poster then got one image and one line. The social posts and the spot reuse the same pictures, so the campaign looks the same wherever people meet it."
+    },
+    {
+      "type": "gallery",
+      "columns": 3,
+      "ratio": "2/3",
+      "images": [
+        {
+          "src": "",
+          "alt": "Headline tests"
+        },
+        {
+          "src": "",
+          "alt": "Poster sketch"
+        },
+        {
+          "src": "",
+          "alt": "Final poster"
+        }
+      ],
+      "caption": "From the headline tests to the final poster."
+    },
+    {
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "width": "wide",
+      "ratio": "3/2",
+      "caption": "The six posters, shown together at a station."
+    },
+    {
+      "type": "video",
+      "url": "",
+      "caption": "The 15-second spot."
+    },
+    {
+      "type": "text",
+      "heading": "Reflection",
+      "body": "Restraint did more work than any illustration. Next time I would test the lines with strangers, not classmates, who already knew the joke."
+    }
+  ]
+}

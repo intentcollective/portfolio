@@ -1,0 +1,68 @@
+{
+  "title": "A Close Shave",
+  "discipline": "Type Design",
+  "format": "Display typeface, three weights, 240 glyphs, specimen booklet",
+  "color": "#4f7a7a",
+  "summary": "A typeface designed for one real job. A condensed display face for a wool shop’s signs and window, spaced so tight the letters almost touch.",
+  "tools": "Glyphs, Illustrator, InDesign",
+  "cover": "",
+  "coverAlt": "A wool shop window lettered in a narrow typeface with letters nearly touching",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "The idea",
+      "body": "Wool is sold by the inch, so every inch of the window counts. The letters are narrow and set almost touching, and a small notch where they meet keeps each one readable from across the street."
+    },
+    {
+      "type": "placeholder",
+      "label": "Drawing. Early letters drawn with a broad marker, then traced and rebuilt as outlines.",
+      "ratio": "16/9"
+    },
+    {
+      "type": "text",
+      "heading": "Process",
+      "body": "I started with the six letters in the shop’s name and grew the alphabet from them. Spacing took longer than drawing. I printed test words at full window size and read them from the other side of the road, then adjusted the notches until no two letters blurred together."
+    },
+    {
+      "type": "gallery",
+      "columns": 3,
+      "ratio": "4/5",
+      "images": [
+        {
+          "src": "",
+          "alt": "First letters"
+        },
+        {
+          "src": "",
+          "alt": "Spacing test"
+        },
+        {
+          "src": "",
+          "alt": "Three weights"
+        }
+      ],
+      "caption": "From the first letters to the spacing test to the three weights."
+    },
+    {
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "width": "wide",
+      "ratio": "3/2",
+      "caption": "The specimen booklet, one weight per section."
+    },
+    {
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "width": "narrow",
+      "ratio": "3/2",
+      "caption": "The shop window, lettered in the heavy weight."
+    },
+    {
+      "type": "text",
+      "heading": "Reflection",
+      "body": "A typeface is never finished, only released. Next time I would test lowercase much earlier, because the shop’s price tags needed it and I drew it last."
+    }
+  ]
+}

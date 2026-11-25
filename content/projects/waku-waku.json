@@ -1,0 +1,68 @@
+{
+  "title": "Waku Waku",
+  "discipline": "Packaging Design",
+  "format": "Three bags and a display box, roasted peanuts",
+  "color": "#b0683a",
+  "summary": "Packaging that wins on a crowded shelf and opens without a fight. A line of roasted peanuts for kids, where every bag hides a small mission to decode.",
+  "tools": "Illustrator, Photoshop, Blender",
+  "cover": "",
+  "coverAlt": "Three bright peanut bags and a display box on a shop shelf",
+  "blocks": [
+    {
+      "type": "text",
+      "heading": "The idea",
+      "body": "Kids pick a snack in two seconds and parents read the back in ten. The front is one big color and one big word for the child. The back is calm and clear for the adult. Inside the flap, a coded message turns snack time into a mission."
+    },
+    {
+      "type": "placeholder",
+      "label": "Research. A shelf audit of kids’ snacks in two supermarkets, photographed at a child’s eye level.",
+      "ratio": "16/9"
+    },
+    {
+      "type": "text",
+      "heading": "Process",
+      "body": "I built the bags in Blender to test them on a virtual shelf before printing a single one. Then I made paper prototypes and handed them to children to open. Any bag that needed an adult’s help went back to the drawing board."
+    },
+    {
+      "type": "gallery",
+      "columns": 3,
+      "ratio": "4/5",
+      "images": [
+        {
+          "src": "",
+          "alt": "Shelf test"
+        },
+        {
+          "src": "",
+          "alt": "Paper prototype"
+        },
+        {
+          "src": "",
+          "alt": "Coded flap"
+        }
+      ],
+      "caption": "From the shelf test to the paper prototype to the coded flap."
+    },
+    {
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "width": "wide",
+      "ratio": "3/2",
+      "caption": "The three flavors and the display box."
+    },
+    {
+      "type": "image",
+      "src": "",
+      "alt": "",
+      "width": "narrow",
+      "ratio": "3/2",
+      "caption": "The back of the bag, written for parents."
+    },
+    {
+      "type": "text",
+      "heading": "Reflection",
+      "body": "The children cared more about the secret message than the peanuts. Next time I would design the code system first and let the bags follow it."
+    }
+  ]
+}

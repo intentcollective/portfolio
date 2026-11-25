@@ -180,7 +180,8 @@ const Site = {
   names: ["Gromit Forger", "Loid Forger", "Henry Hongmin Kim", "alter ego",
           "Imperial Scholar", "Where is Stella?", "Thorn Princess", "Top Bun",
           "Operation Strix", "The Wrong Trousers", "Stella Stars",
-          "Cracking Cheese", "Anti-Pesto", "Feathers McGraw", "Eden Academy"],
+          "Cracking Cheese", "Anti-Pesto", "Waku Waku", "A Close Shave",
+          "A Grand Day Out", "Feathers McGraw", "Eden Academy"],
 
   typeset(root = document.querySelector("main")) {
     if (!root) return;
