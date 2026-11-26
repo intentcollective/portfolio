@@ -49,7 +49,7 @@
   },
 
   "passwordHash": "927a3aed189d610b2e151c4208913b3ed0cb38f6be613756819b1513c8924d7f",
-  "showGrid": true,
+  "showGrid": false,
   "colophon": "story.html",
   "showGuideLink": true
 }
