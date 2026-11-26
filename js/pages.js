@@ -16,16 +16,15 @@ const Pages = {
   /* ---------- Works (index.html) ---------- */
   async works(s) {
     const main = document.querySelector("main");
-    const words = s.rotatingWords || [""];
 
-    // 1. The hero header
-    const lines = (s.headline || []).map((line, i) => {
-      const inner = line === "{rotate}"
-        ? `<span class="hero__rotate"><span class="word">${esc(words[0])}</span></span>`
-        : esc(line);
-      return `<span class="hero__line"><span style="--i:${i}">${inner}</span></span>`;
+    // 1. The hero header: a static statement, one word in red
+    const accent = s.headlineAccent || "";
+    const lines = (s.headline || []).map(line => {
+      let inner = esc(line);
+      if (accent) inner = inner.replace(esc(accent), `<span class="hero__accent">${esc(accent)}</span>`);
+      return `<span class="hero__line">${inner}</span>`;
     }).join("");
-    const spoken = (s.headline || []).join(" ").replace("{rotate}", words[0]);
+    const spoken = (s.headline || []).join(" ");
 
     main.innerHTML = `
       <section class="hero wrap cols">
@@ -39,8 +38,6 @@ const Pages = {
         <div class="works__grid cols" id="grid"></div>
       </section>`;
 
-    Pages.rotateWords(words);
-
     // 2. The project cards, in the order listed in settings.json
     const projects = await Pages.loadProjects(s.works);
     document.getElementById("grid").innerHTML = projects.map(({ slug, data: p }) => `
@@ -52,25 +49,6 @@ const Pages = {
         <p class="card__meta">${esc(p.discipline)}</p>
       </a>`).join("");
     Site.reveal();
-  },
-
-  /* Swap the accent word in the headline every few seconds. */
-  rotateWords(words) {
-    const holder = document.querySelector(".hero__rotate");
-    if (!holder || words.length < 2) return;
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    let i = 0;
-    setTimeout(() => setInterval(() => {
-      const current = holder.querySelector(".word");
-      current.classList.add("is-out");
-      setTimeout(() => {
-        i = (i + 1) % words.length;
-        current.textContent = words[i];
-        current.classList.remove("is-out");
-        current.classList.add("is-in");
-        setTimeout(() => current.classList.remove("is-in"), 500);
-      }, 340);
-    }, 2400), 1600);
   },
 
   /* Load every project file listed in settings.json. */
